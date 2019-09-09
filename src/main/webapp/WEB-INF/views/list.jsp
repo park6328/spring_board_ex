@@ -15,15 +15,17 @@
 		<tr>
 
 			<td>순번</td>
-			<td>작성자ID</td>
+			<td>작성자Id</td>
+			<td>작성자</td>
 			<td>제목</td>
 
 		</tr>
-		<c:forEach items=" " var="dto" varStatus="status">
+		<c:forEach items="${selectList}" var="dto" varStatus="status">
 			<tr>
-				<td></td>
-				<td></td>
-				<td><a href=""></a></td>
+				<td>${status.index}</td>
+				<td>${dto.id}</td>
+				<td>${dto.name}</td>
+				<td><a href="select?id=${dto.id}">${dto.title}</a></td>
 			</tr>
 		</c:forEach>
 
